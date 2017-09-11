@@ -83,7 +83,9 @@ namespace StackExchange.Exceptional.Pages
             sb.AppendLine("<!DOCTYPE html>")
               .AppendLine("<html>")
               .AppendLine("  <head>")
-              .AppendFormat("    <title>{0}</title>", PageTitle.HtmlEncode()).AppendLine();
+              .AppendFormat("    <title>{0}</title>", PageTitle.HtmlEncode()).AppendLine()
+              .AppendLine("    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">");
+
             if (InlineCSS)
             {
                 sb.Append("    <style>").Append(Resources.BundleCss.Content).AppendLine("</style>");
